@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom vs JavaScript</title>
+</head>
+<body>
+    <h1>World searcher link</h1>
+    <p>Click the below button if you wan to find out the meaning of <strong>Scientist</strong></p>
+    <button onclick="script_operation()">Check Meaning</button>
+</body>
+<script>
+    function script_operation(){
+        let url = 'https://dictionary.com/browse/scientist?s=t'
+        let new_window = window.open(url, '', 'width=500, height=800')
+        // close window after 5 seconds.
+        setTimeout(()=>{
+            new_window.close()
+        },5000)
+    }
+</script>
+</html>
